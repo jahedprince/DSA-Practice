@@ -46,3 +46,18 @@ console.log(lengthOfLongestSubstringTwoDistinct(s));
 //   }
 //   return max;
 // }
+
+//For K distinct
+// var lengthOfLongestSubstringKDistinct = function(s, k) {
+//     let maxLength = 0;
+//     for (let i = 0; i < s.length; i++) {
+//         for (let j = i; j < s.length; j++) {
+//             let subStr = s.substring(i, j+1);
+//             let charSet = new Set(subStr);
+//             if (charSet.size <= k) {
+//                 maxLength = Math.max(maxLength, subStr.length);
+//             }
+//         }
+//     }
+//     return maxLength;
+// };
