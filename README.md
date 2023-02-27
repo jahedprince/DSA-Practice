@@ -51,7 +51,7 @@ The Merge Intervals pattern is an efficient technique to deal with overlapping i
 
 The pattern works like this: Given two intervals (‘a’ and ‘b’), there will be six different ways the two intervals can relate to each other -
 
-![Merge Intervals](.../main/imgs/mergeIntervals.png)
+![Merge Intervals](/main/imgs/mergeIntervals.png)
 
 Understanding and recognizing these six cases will help you help you solve a wide range of problems from inserting intervals to optimizing interval merges.
 
