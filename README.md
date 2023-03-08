@@ -62,7 +62,8 @@ How do you identify when to use the Merge Intervals pattern?
 
 5. Cyclic Sort
 
-This pattern describes an interesting approach to deal with problems involving arrays containing numbers in a given range. The Cyclic Sort pattern iterates over the array one number at a time, and if the current number you are iterating is not at the correct index, you swap it with the number at its correct index. You could try placing the number in its correct index, but this will produce a complexity of O(n^2) which is not optimal, hence the Cyclic Sort pattern.
+This pattern describes an interesting approach to deal with problems involving arrays containing numbers in a given range!!!!.
+The Cyclic Sort pattern iterates over the array one number at a time, and if the current number you are iterating is not at the correct index, you swap it with the number at its correct index. You could try placing the number in its correct index, but this will produce a complexity of O(n^2) which is not optimal, hence the Cyclic Sort pattern (maximum time complexity of O(n)).
 
 ![Cyclic Sort](/imgs/cyclicSort.png)
 
@@ -70,5 +71,11 @@ How do I identify this pattern?
 
 - They will be problems involving a sorted array with numbers in a given range
 - If the problem asks you to find the missing/duplicate/smallest number in an sorted/rotated array
+
+6. In-Place Reversal of Linked List
+
+In a lot of problems, you may be asked to reverse the links between a set of nodes of a linked list. Often, the constraint is that you need to do this in-place, i.e., using the existing node objects and without using extra memory. This is where the above mentioned pattern is useful.
+
+This pattern reverses one node at a time starting with one variable (current) pointing to the head of the linked list, and one variable (previous) will point to the previous node that you have processed. In a lock-step manner, you will reverse the current node by pointing it to the previous before moving on to the next node. Also, you will update the variable “previous” to always point to the previous node that you have processed.
 
 Video Reference: https://www.youtube.com/watch?v=wrNEKxlDWlw
