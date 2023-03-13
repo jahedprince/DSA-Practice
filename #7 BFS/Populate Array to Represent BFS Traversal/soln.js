@@ -57,3 +57,8 @@ root.right.left = new TreeNode(6);
 root.right.right = new TreeNode(7);
 
 console.log(levelOrderTraverse(root));
+
+/*
+T.C: O(N) - The whole tree is traversed atmost once. Here, n refers to the number of nodes in the given binary tree.
+S.C: O(M) - The size of queue or temp can grow upto atmost the maximum number of nodes at any level in the given binary tree. Here, m refers to the maximum mumber of nodes at any level in the input tree.
+*/
