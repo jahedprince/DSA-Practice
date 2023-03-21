@@ -10,6 +10,8 @@ Here, I’ve laid out the top 14 patterns that can be used to solve any coding i
 
 The Sliding Window pattern is used to perform a required operation on a specific window size of a given array or linked list, such as finding the longest subarray containing all 1s. Sliding Windows start from the 1st element and keep shifting right by one element and adjust the length of the window according to the problem that you are solving. In some cases, the window size remains constant and in other cases the sizes grows or shrinks.
 
+![Sliding Window](/imgs/slidingwindow.png)
+
 Following are some ways you can identify that the given problem might require a sliding window:
 
 - The problem input is a linear data structure such as a linked list, array, or string
@@ -25,6 +27,8 @@ Two Pointers is a pattern where two pointers iterate through the data structure 
 
 Two pointers are needed because with just 1 pointer, you would have to continually loop back through the array to find the answer. This back and forth with a single iterator is inefficient for time and space complexity — a concept referred to as asymptotic analysis. While the brute force or naive solution with 1 pointer would work, it will produce something along the lines of O(n²). In many cases, two pointers can help you find a solution with better space or runtime complexity.
 
+![Two Pointers](/imgs/2pointers.png)
+
 Ways to identify when to use the Two Pointer method:
 
 - It will feature problems where you deal with sorted arrays (or Linked Lists) and need to find a set of elements that fulfill certain constraints
@@ -35,6 +39,8 @@ Ways to identify when to use the Two Pointer method:
 The Fast and Slow pointer approach, also known as the Hare & Tortoise algorithm, is a pointer algorithm that uses two pointers which move through the array (or sequence/linked list) at different speeds. This approach is quite useful when dealing with cyclic linked lists or arrays.
 
 By moving at different speeds (say, in a cyclic linked list), the algorithm proves that the two pointers are bound to meet. The fast pointer should catch the slow pointer once both the pointers are in a cyclic loop.
+
+![Fast and Slow Pointers](/imgs/fastslowpointers.png)
 
 How do you identify when to use the Fast and Slow pattern?
 
