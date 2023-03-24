@@ -2,20 +2,22 @@
 
 var twoSum = function (nums, target) {
   let solution = [];
-  let leftPointer = 0;
-  let rightPointer = nums.length - 1;
-
-  while (nums[leftPointer] + nums[rightPointer] != target) {
-    if (leftPointer != rightPointer) {
-      rightPointer = rightPointer - 1;
+  let left = 0;
+  let right = nums.length - 1;
+  while (nums[left] + nums[right] != target) {
+    //first move the right
+    if (left != right) {
+      right--;
     }
-    if (leftPointer == rightPointer) {
-      leftPointer = leftPointer + 1;
-      rightPointer = nums.length - 1;
+    //now reset, and move left
+    if (left == right) {
+      left++;
+      right = nums.length - 1;
     }
   }
-  solution.push(leftPointer);
-  solution.push(rightPointer);
+
+  solution.push(left);
+  solution.push(right);
   return solution;
 };
 

@@ -1,6 +1,7 @@
 //Main: a way to store the index
 //we make the complement of the element as the key of map to check in future iterations if there is an index for that comp.
 //if there is comp, you return that index, as well the index (value) of that current element (key)
+//basically: store the complement of each element and when interating if the complements of previous elements are the actual future elements, then u have a match
 var twoSum = function (nums, target) {
   const comp = {};
   for (let i = 0; i < nums.length; i++) {

@@ -13,6 +13,12 @@ var threeSum = function (nums) {
 
   //// `i` represents the "left" most number in our sorted set.
   for (let i = 0; i < nums.length; i++) {
+    //skip duplicates even before assigning left and right
+    //check for dupes on the outter loop, skip if nums[i] is a num we already saw
+    if (nums[i] === nums[i - 1]) {
+      continue;
+    }
+
     // `low` represents the "middle" element between `i` and `k`.
     // we will increment this up through the array while `i` and `high`
     // are anchored to their positions. we will decrement `high` for
@@ -30,11 +36,13 @@ var threeSum = function (nums) {
     // on some logic we'll set up below. once they collide, `i` will be incremented up
     // and we'll repeat the process.
 
+    //To make sure the result contains unique triplets, we need to skip duplicate values. It is easy to do because repeating values are next to each other in a sorted array.
     while (low < high) {
       sum = nums[i] + nums[low] + nums[high];
 
       if (sum === 0) {
         result.push([nums[i], nums[low], nums[high]]);
+        //to avoid duplicate solution sets and only moves the pointer until the next isn't the same, so that's the next two statemnts take care of having diff values
         while (nums[low + 1] === nums[low]) low++;
         while (nums[high - 1] === nums[high]) high--;
         low++;
@@ -42,7 +50,6 @@ var threeSum = function (nums) {
       } else if (sum < 0) low++;
       else high--;
     }
-    while (nums[i + 1] === nums[i]) i++;
   }
   return result;
 };
