@@ -2,6 +2,7 @@ var missingNumber = function (nums) {
   //sort the elements first using cyclic sort
   let i = 0;
   while (i < nums.length) {
+    //0 based so we wont have to do -1 compared to prev problem
     const newSpot = nums[i];
     // swap the elements
     // second condition is placed so that the element needed to be swapped remains in its place in case the right place is out of bounds
@@ -28,5 +29,5 @@ var missingNumber = function (nums) {
 };
 
 //for the second condition in if statement
-console.log(missingNumber([4, 0, 3, 1])); //2
+console.log(missingNumber([4, 0, 3, 1])); //2 bc 4 is out of bounds
 console.log(missingNumber([3, 5, 2, 4, 0, 1])); //6
