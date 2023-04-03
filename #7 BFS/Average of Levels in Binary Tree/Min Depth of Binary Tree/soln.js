@@ -21,12 +21,12 @@ var averageOfLevels = function (root) {
   queue.push(root);
   while (queue.length) {
     const levelSize = queue.length;
-    const currentLevel = [];
+    // const currentLevel = [];
     let sum = 0;
     for (let i = 0; i < levelSize; i++) {
       const currentNode = queue.shift();
       sum = sum + currentNode.val;
-      currentLevel.push(currentNode.val);
+      // currentLevel.push(currentNode.val);
       if (currentNode.left) {
         queue.push(currentNode.left);
       }
